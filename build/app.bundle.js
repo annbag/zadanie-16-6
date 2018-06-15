@@ -456,14 +456,27 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 
 /***/ }),
 
+/***/ "./src/components/Todo.js":
+/*!********************************!*\
+  !*** ./src/components/Todo.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Todo = function Todo(props) {\n\treturn _react2.default.createElement(\n\t\t'li',\n\t\tnull,\n\t\tprops.text,\n\t\t_react2.default.createElement(\n\t\t\t'button',\n\t\t\t{ onClick: function onClick() {\n\t\t\t\t\treturn props.remove(props.id);\n\t\t\t\t} },\n\t\t\t' X '\n\t\t)\n\t);\n};\nexports.default = Todo;\n\n//# sourceURL=webpack:///./src/components/Todo.js?");
+
+/***/ }),
+
 /***/ "./src/components/TodoList.js":
 /*!************************************!*\
   !*** ./src/components/TodoList.js ***!
   \************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: E:/Kodilla/zadanie-16-6/src/components/TodoList.js: Unexpected token (4:1)\\n\\n  2 | \\n  3 | const TodoList = props => (\\n> 4 | \\tconst todoListElements = props.list.map(element =>\\n    | \\t^\\n  5 | \\t\\t<Option text = {element.text} id = {element.id} remove = {props.remove} />)\\n  6 | \\treturn (\\n  7 | \\t\\t<ul className = {style.TodoList}> {todoListElements} </ul>\\n\");\n\n//# sourceURL=webpack:///./src/components/TodoList.js?");
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n\tvalue: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Todo = __webpack_require__(/*! ./Todo.js */ \"./src/components/Todo.js\");\n\nvar _Todo2 = _interopRequireDefault(_Todo);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar TodoList = function TodoList(props) {\n\tvar todoListElements = props.list.map(function (element) {\n\t\treturn _react2.default.createElement(_Todo2.default, { text: element.text, id: element.id, remove: props.remove });\n\t});\n\treturn _react2.default.createElement(\n\t\t'ul',\n\t\t{ className: style.TodoList },\n\t\ttodoListElements\n\t);\n};\nexports.default = TodoList;\n\n//# sourceURL=webpack:///./src/components/TodoList.js?");
 
 /***/ }),
 

@@ -1,10 +1,9 @@
 import React from 'react';
-import React from 'react-dom';
 
-class Form extends React.Component {
+class TodoForm extends React.Component {
     constructor(props){
 	    super(props);
-	    this.state = {value: ''};
+	    this.state = {text: ''};
 
 	    this.handleChange = this.handleChange.bind(this);
 	    this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,9 +25,9 @@ class Form extends React.Component {
 					<input type="text" value={this.state.value} onChange={this.handleChange} />
 				</label>
 			</form>
-		);
+		)
 	}
 }
 
 
-export default AddTodo;
+export default TodoForm;

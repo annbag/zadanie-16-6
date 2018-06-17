@@ -19,7 +19,7 @@ module.exports = (env) => {
         return {
         mode: env || 'production',
         entry: './src/index.js',
-            output: {
+        output: {
             path: path.resolve(__dirname, 'build'),
             filename: 'app.bundle.js'
         },
@@ -45,6 +45,6 @@ module.exports = (env) => {
                 }
             ]           
         },
-        plugins
+        plugins: plugins
     }
 };

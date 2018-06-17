@@ -1,11 +1,19 @@
 import React from 'react';
 import Todo from './Todo.js';
+import App from '../containers/App.js';
 
-const TodoList = props => {
-	const todoListElements = todos.map(todo => (
-		<Todo text={todo.text} id={todo.id} remove={props.remove} />)	
-	)
-	return <ul className={style.TodoList}>{todoListElements}</ul>
+
+const TodoList = ({todos, remove}) => {
+    const tasks = todos.map(element => {
+    	return (
+    		<Todo 
+    			key= {element.id}
+    			tasks= {element}
+    			remove={remove} 
+    		/>
+    	);
+    })
+    return (<ul> {tasks} </ul> );
 }
 
 export default TodoList;

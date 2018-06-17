@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Todo = (props) => (
-	<li>
-		{props.text}
-		<button onClick={() => props.remove(props.id)}> X </button>
-	</li> 
-)
+const Todo = ({task, remove}) => {
+	return (
+		<li>
+			{task.text}
+			<button onClick={() => remove(task.id)}> X </button>
+		</li> 
+	);
+}
 export default Todo;

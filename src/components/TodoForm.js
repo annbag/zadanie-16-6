@@ -1,10 +1,34 @@
 import React from 'react';
+import React from 'react-dom';
 
-const AddTodo = ({onSubmit, todoText, onChange }) => (
-	<form>
-		<input type="text" value={todoText}></input>
-		<button type="submit">Add</button>
-	</form>
-)
+class Form extends React.Component {
+    constructor(props){
+	    super(props);
+	    this.state = {value: ''};
+
+	    this.handleChange = this.handleChange.bind(this);
+	    this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleChange(event) {
+		this.setState({value: event.target.value});
+	}
+
+	handleSubmit(event) {
+		event.preventDefault();
+	}
+
+	render() {
+		return (
+			<form onSubmit={this.handleSubmit}>
+				<label>
+					Add task:
+					<input type="text" value={this.state.value} onChange={this.handleChange} />
+				</label>
+			</form>
+		);
+	}
+}
+
 
 export default AddTodo;

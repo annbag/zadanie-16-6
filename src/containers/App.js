@@ -1,10 +1,10 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
 import TodoList from '../components/TodoList';
 import TodoForm from '../components/TodoForm';
-import { hot } from 'react-hot-loader';
 
 class App extends React.Component {
     constructor(props){
@@ -13,7 +13,7 @@ class App extends React.Component {
             data: [
                 {
                     id: 1,
-                    text: 'cnpmlean room'
+                    text: 'clean room'
                 }, 
                 {
                     id: 2,
@@ -47,7 +47,7 @@ class App extends React.Component {
         return (
             <div className={style.TodoApp}>
                 <Title title='ToDo' lengthTask={this.state.data.length} />
-                <TodoForm addTodo={this.addTodo.bind(this)} />
+                <TodoForm addtask={this.addTodo.bind(this)} />
                 <TodoList 
                     remove={this.removeTodo.bind(this)} 
                     todos={this.state.data}  />
@@ -56,4 +56,4 @@ class App extends React.Component {
     }
 }
 
-export default hot(module) App;
+export default hot(module) (App);

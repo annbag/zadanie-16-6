@@ -2,7 +2,7 @@ import React from 'react';
 
 const Todo = ({task, remove}) => (
 	<li> 
-		{task}
+		{task.text}
 		<button onClick={() => remove(task.id)}> X </button>
 	</li> 
 );

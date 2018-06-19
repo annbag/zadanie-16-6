@@ -4,16 +4,16 @@ import App from '../containers/App.js';
 
 
 const TodoList = ({todos, remove}) => {
-    const tasks = todos.map(element => {
+    const task = todos.map(element => {
     	return (
     		<Todo 
     			key= {element.id}
-    			tasks= {element}
+    			task= {element}
     			remove={remove} 
     		/>
     	);
     })
-    return (<ul> {tasks} </ul> );
+    return (<ul> {task} </ul> );
 }
 
 export default TodoList;
